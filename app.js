@@ -16,7 +16,7 @@ var peerserver = ExpressPeerServer(server, options);
 
 app.use('/peerjs', peerserver);
 
-server.listen(9000,() => {
+server.listen(process.env.PORT || 9000,() => {
     console.log('Server is listening on port 9000')
 });
 
